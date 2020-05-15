@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 public class PanelStack {
 	// Saves the panels in this stack.
 	private Stack<JPanel> panels;
+	private int length;
 	
 	/**
 	 * Constructor initializing an empty list.
@@ -21,6 +22,7 @@ public class PanelStack {
 	public PanelStack(JPanel initialPanel) {
 		this();
 		panels.push(initialPanel);
+		length = 1;
 	}
 	/**
 	 * Concats a new panel to the stack.
@@ -28,6 +30,7 @@ public class PanelStack {
 	 */
 	public void push(JPanel panel) {
 		panels.push(panel);
+		length++;
 	}
 	/**
 	 * Looks at the element at the top of the stack.
@@ -42,7 +45,9 @@ public class PanelStack {
 	 * @return the element that was removed.
 	 */
 	public JPanel pop() {
+		length--;
 		return panels.pop();
+		
 	}
 	/**
 	 * Deletes the current Stack and initializes a new, empty one.
@@ -54,7 +59,16 @@ public class PanelStack {
 		// Deletes the stack.
 		panels = null;
 		panels = new Stack<JPanel>();
+		length = 0;
 		
 		return panel;
+	}
+	
+	/**
+	 * Returns the length of the Stack/ how many panels are on it at this instance.
+	 * @return length of the Stack.
+	 */
+	public int getLength() {
+		return length;
 	}
 }
