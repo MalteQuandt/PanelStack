@@ -46,6 +46,7 @@ public class PanelStack {
 	}
 	/**
 	 * Deletes the current Stack and initializes a new, empty one.
+	 * @return the current, latest object at the top of the stack.
 	 */
 	public JPanel popWhole() {
 		JPanel panel = panels.peek();
