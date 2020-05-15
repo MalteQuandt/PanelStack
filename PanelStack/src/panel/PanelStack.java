@@ -44,4 +44,16 @@ public class PanelStack {
 	public JPanel pop() {
 		return panels.pop();
 	}
+	/**
+	 * Deletes the current Stack and initializes a new, empty one.
+	 */
+	public JPanel popWhole() {
+		JPanel panel = panels.peek();
+		
+		// Deletes the stack.
+		panels = null;
+		panels = new Stack<JPanel>();
+		
+		return panel;
+	}
 }
