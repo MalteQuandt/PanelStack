@@ -9,8 +9,6 @@ public class PanelStack {
 	private Stack<JPanel> panels;
 	// Variable specifying the length of the stack.
 	private int length;
-	// Variable setting the name of the panel.
-	private String name;
 
 	/**
 	 * Constructor initializing an empty list.
@@ -24,11 +22,10 @@ public class PanelStack {
 	 * 
 	 * @param initialPanel the first value
 	 */
-	public PanelStack(JPanel initialPanel, String name) {
+	public PanelStack(JPanel initialPanel) {
 		this();
 		panels.push(initialPanel);
 		length = 1;
-		this.name = name;
 	}
 
 	/**
