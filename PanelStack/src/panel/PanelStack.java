@@ -7,7 +7,10 @@ import javax.swing.JPanel;
 public class PanelStack {
 	// Saves the panels in this stack.
 	private Stack<JPanel> panels;
+	// Variable specifying the length of the stack.
 	private int length;
+	// Variable setting the name of the panel.
+	private String name;
 
 	/**
 	 * Constructor initializing an empty list.
@@ -21,10 +24,11 @@ public class PanelStack {
 	 * 
 	 * @param initialPanel the first value
 	 */
-	public PanelStack(JPanel initialPanel) {
+	public PanelStack(JPanel initialPanel, String name) {
 		this();
 		panels.push(initialPanel);
 		length = 1;
+		this.name = name;
 	}
 
 	/**
