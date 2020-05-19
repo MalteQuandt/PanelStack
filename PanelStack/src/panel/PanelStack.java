@@ -39,6 +39,17 @@ public class PanelStack {
 	}
 
 	/**
+	 * Pops the stack and returns the new tos.
+	 * 
+	 * @return the new top of stack.
+	 */
+	public JPanel stepBack() {
+		panels.pop();
+		length--;
+		return panels.peek();
+	}
+
+	/**
 	 * Looks at the element at the top of the stack.
 	 * 
 	 * @return the top of the stack element.
