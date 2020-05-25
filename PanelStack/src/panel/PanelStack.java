@@ -1,5 +1,6 @@
 package panel;
 
+import java.awt.Panel;
 import java.util.Stack;
 
 import javax.swing.JPanel;
@@ -26,6 +27,14 @@ public class PanelStack {
 		this();
 		panels.push(initialPanel);
 		length = 1;
+	}
+
+	public String print() {
+		String buffer = "";
+		for (JPanel panel : panels) {
+			buffer += panel.getName() + "\n";
+		}
+		return buffer;
 	}
 
 	/**
