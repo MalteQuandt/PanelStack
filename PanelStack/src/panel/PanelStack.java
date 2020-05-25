@@ -32,7 +32,7 @@ public class PanelStack {
 	public String print() {
 		String buffer = "";
 		for (JPanel panel : panels) {
-			buffer += panel.getName() + "\n";
+			buffer += panel + "\n";
 		}
 		return buffer;
 	}
